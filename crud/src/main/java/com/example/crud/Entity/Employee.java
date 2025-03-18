@@ -10,25 +10,26 @@ public class Employee {
     private int id;
     private String name;
     private String email;
-    private String imgUrl;
     @JoinColumn(name = "department_id")
     @ManyToOne
     private Department department;
     @JoinColumn(name = "position_id")
     @ManyToOne
     private Position position;
-    public Employee(){}
-    public Employee(int id, String name, String email, Department department, Position position,String imgUrl) {
+
+    public Employee() {
+    }
+
+    public Employee(int id, String name, String email, Department department, Position position) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.department = department;
         this.position = position;
-        this.imgUrl = imgUrl;
     }
 
     public String getPosition() {
-        return position !=null ? position.getTitle() : null;
+        return position != null ? position.getTitle() : null;
     }
 
     public void setPosition(Position position) {
@@ -36,7 +37,7 @@ public class Employee {
     }
 
     public String getDepartment() {
-        return department != null? department.getTitle():null;
+        return department != null ? department.getTitle() : null;
     }
 
     public void setDepartment(Department department) {
@@ -65,13 +66,5 @@ public class Employee {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
     }
 }

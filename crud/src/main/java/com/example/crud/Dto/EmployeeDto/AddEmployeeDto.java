@@ -5,7 +5,10 @@ public class AddEmployeeDto {
     private String email;
     private int department_id;
     private int position_id;
-    public AddEmployeeDto(){}
+
+    public AddEmployeeDto() {
+    }
+
     public AddEmployeeDto(String name, String email, int departmentId, int positionId) {
         this.name = name;
         this.email = email;

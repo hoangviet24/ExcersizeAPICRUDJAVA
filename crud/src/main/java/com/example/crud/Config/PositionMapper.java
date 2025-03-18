@@ -7,11 +7,11 @@ import com.example.crud.Entity.Position;
 import java.util.stream.Collectors;
 
 public class PositionMapper {
-    public static PositionDto toDTO(Position position){
+    public static PositionDto toDTO(Position position) {
         return new PositionDto(
                 position.getId(),
                 position.getTitle(),
-                position.getEmployees() != null?position.getEmployees().stream().map(Employee::getName).collect(Collectors.toList()):null
+                position.getEmployees() != null ? position.getEmployees().stream().map(Employee::getName).collect(Collectors.toList()) : null
         );
     }
 }

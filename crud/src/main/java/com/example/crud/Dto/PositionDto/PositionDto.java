@@ -6,7 +6,10 @@ public class PositionDto {
     private int id;
     private String title;
     private List<String> nameEmployees;
-    public PositionDto(){}
+
+    public PositionDto() {
+    }
+
     public PositionDto(int id, String title, List<String> nameEmployees) {
         this.id = id;
         this.title = title;

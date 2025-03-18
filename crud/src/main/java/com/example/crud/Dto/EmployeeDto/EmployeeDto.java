@@ -6,16 +6,16 @@ public class EmployeeDto {
     private String email;
     private String department;
     private String position;
-    private String imgUrl;
-    public EmployeeDto(){
+
+    public EmployeeDto() {
     }
-    public EmployeeDto(int id, String name, String email, String department, String position, String imgUrl) {
+
+    public EmployeeDto(int id, String name, String email, String department, String position) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.department = department;
         this.position = position;
-        this.imgUrl = imgUrl;
     }
 
     public String getPosition() {
@@ -56,13 +56,5 @@ public class EmployeeDto {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
     }
 }

@@ -1,6 +1,7 @@
 package com.example.crud.Entity;
 
 import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity
@@ -12,7 +13,10 @@ public class Position {
     private String title;
     @OneToMany(mappedBy = "position", cascade = CascadeType.ALL)
     private List<Employee> employees;
-    public Position(){}
+
+    public Position() {
+    }
+
     public Position(int id, String title, List<Employee> employees) {
         this.id = id;
         this.title = title;

@@ -6,7 +6,7 @@ public class DepartmentDto {
     private int id;
     private String title;
     private List<String> nameEmployees;
-
+    public DepartmentDto(){}
     public DepartmentDto(int id, String title, List<String> nameEmployees) {
         this.id = id;
         this.title = title;
